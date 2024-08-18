@@ -1,0 +1,71 @@
+.homepage {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 20px; */
+  }
+  
+  .hero {
+    background-color: #f0f0f0;
+    background-image: url("https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Ensures the positioning context for the overlay */
+}
+
+.hero::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 0; /* Ensures it stays behind the text content */
+}
+
+.hero h1, .hero p {
+    position: relative;
+    color: #ffffff;
+    z-index: 1; /* Ensures text appears above the overlay */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+  
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  .feature {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 0 10px;
+  }
+  
+  .cta {
+    text-align: center;
+    padding: 50px;
+    background-color: #e0f5ce;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
